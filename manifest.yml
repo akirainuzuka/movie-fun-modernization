@@ -11,7 +11,7 @@ applications:
     - route: album-service-{UNIQUE_IDENTIFIER}.apps.chicken.pal.pivotal.io
   services:
   - album-database
-  - moviefun-s3
+  - photo-storage
   env:
     GRANT_TYPE: client_credentials
 - name: movie-service
@@ -27,4 +27,5 @@ applications:
   routes:
     - route: movie-fun-app-{UNIQUE_IDENTIFIER}.apps.chicken.pal.pivotal.io
   services:
-  - moviefun-s3
+  - photo-storage
+  - movie-fun-config-server
